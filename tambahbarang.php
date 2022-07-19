@@ -29,21 +29,6 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Stok</label>
-                  <input class="form-control" name="stok" placeholder="Masukkan Stok Barang" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label>Harga Modal</label>
-                  <input type="text" name="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
-                </div>
-                
-                <div class="form-group">
                   <label>ID Kategori</label>
                   <?php
                     include 'koneksi.php';
@@ -71,8 +56,23 @@
                     <option value="<?php echo $row['id_supplier']?>"><?php echo $row['id_supplier'].$a.$row['nama_supplier'];?></option>
                     <?php } ?>
                   </select>
+                  </div>
+
+                <div class="form-group">
+                  <label>Stok</label>
+                  <input class="form-control" name="stok" placeholder="Masukkan Stok Barang" class="form-control">
                 </div>
                 
+                <div class="form-group">
+                  <label>Harga Modal</label>
+                  <input type="text" name="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Harga Jual</label>
+                  <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
+                </div>
+                      
                 <div class="form-group">
                   <label>Tanggal Masuk</label>
                   <input type="date" name="tanggal_masuk" placeholder="Masukkan Tanggal Masuk Barang" class="form-control">

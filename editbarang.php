@@ -38,27 +38,12 @@
                   <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" >
                   <input type="hidden" name="id_barang" value="<?php echo $row['id_barang'] ?>"/>
                 </div>
-
+                
                 <div class="form-group">
                   <label>Nama Barang</label>
                   <input type="text" name="nama_barang" value="<?php echo $row['nama_barang'] ?>" class="form-control">
                 </div>
                 
-                <div class="form-group">
-                  <label>Stok</label>
-                  <input type="text" name="stok" value="<?php echo $row['stok'] ?>" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label>Harga Modal</label>
-                  <input type="text" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
-                </div>
-
                 <div class="form-group">
                   <label>ID Kategori</label>
                   <?php
@@ -88,6 +73,25 @@
                     <?php } ?>
                   </select>
                 </div>
+
+                
+                
+                <div class="form-group">
+                  <label>Stok</label>
+                  <input type="text" name="stok" value="<?php echo $row['stok'] ?>" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                  <label>Harga Modal</label>
+                  <input type="text" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Harga Jual</label>
+                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
+                </div>
+
+                
                 
                 <div class="form-group">
                   <label>Tanggal Masuk</label>

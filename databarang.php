@@ -62,13 +62,12 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID BARANG</th>
                     <th scope="col">NAMA BARANG</th>
+                    <th scope="col">NAMA KATEGORI</th>
+                    <th scope="col">NAMA SUPPLIER</th>
                     <th scope="col">STOK</th>
                     <th scope="col">HARGA MODAL</th>
                     <th scope="col">HARGA JUAL</th>
-                    <th scope="col">ID KATEGORI</th>
-                    <th scope="col">ID SUPPLIER</th>
                     <th scope="col">TANGGAL MASUK</th>
                     <th scope="col">AKSI</th>
                   </tr>
@@ -77,19 +76,18 @@
                   <?php 
                       include('koneksi.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM barang");
+                      $query = mysqli_query($connection,"SELECT * FROM barang INNER JOIN kategori ON kategori.id_kategori=barang.id_kategori INNER JOIN supplier ON supplier.id_supplier=barang.id_supplier");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_barang'] ?></td>
                       <td><?php echo $row['nama_barang'] ?></td>
+                      <td><?php echo $row['nama_kategori'] ?></td>
+                      <td><?php echo $row['nama_supplier'] ?></td>
                       <td><?php echo $row['stok'] ?></td>
                       <td><?php echo $row['harga_modal'] ?></td>
                       <td><?php echo $row['harga_jual'] ?></td>
-                      <td><?php echo $row['id_kategori'] ?></td>
-                      <td><?php echo $row['id_supplier'] ?></td>
                       <td><?php echo $row['tanggal_masuk'] ?></td>
                       <td class="text-center">
                         <a href="editbarang.php?id=<?php echo $row['id_barang'] ?>" class="btn btn-sm btn-primary">EDIT</a>

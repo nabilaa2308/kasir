@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM transaksi WHERE id_transaksi = $id LIMIT 1";
+  $query = "SELECT * FROM transaksi_detail WHERE id_transaksi_detail = $id LIMIT 1";
 
   $result = mysqli_query($connection, $query);
 
@@ -31,16 +31,16 @@
               EDIT TRANSAKSI
             </div>
             <div class="card-body">
-              <form action="updatetransaksi.php" method="POST">
+              <form action="updatetransaksidetail.php" method="POST">
                 
                 <div class="form-group">
-                  <label>ID Transaksi</label>
-                  <input type="text" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" placeholder="Masukkan ID Transaksi" class="form-control”>
-                  <input type="hidden" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>">
+                  <label>ID Transaksi Detail</label>
+                  <input type="text" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi" class="form-control”>
+                  <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>">
                 </div>
 
                 <div class="form-group">
-                  <label>Kode Inv</label>
+                  <label></label>
                   <input type="text" name="kode_inv" value="<?php echo $row['kode_inv'] ?>" placeholder="Masukkan Kode Inv" class="form-control">
                 </div>
                 
