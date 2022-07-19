@@ -91,7 +91,7 @@
                 
                 <div class="form-group">
                   <label>Tanggal Masuk</label>
-                  <input type="text" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" class="form-control">
+                  <input type="date" name="tanggal_masuk" value="<?php echo $row['tanggal_masuk'] ?>" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
