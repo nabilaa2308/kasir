@@ -58,6 +58,7 @@
                     <?php while($row=mysqli_fetch_array($query)){?>
                     <option value="<?php echo $row['id_cabang']?>"><?php echo $row['id_cabang'].$a.$row['nama_cabang'];?></option>
                     <?php } ?>
+                  </select>
                 </div>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

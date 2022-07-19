@@ -46,7 +46,7 @@
                   <label>ID Perusahaan</label>
                   <?php
                     include 'koneksi.php';
-                  $sql= " SELECT * FROM perusahaan ";
+                  $sql= " SELECT * FROM perusahaan";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
                   ?>
@@ -54,10 +54,11 @@
                     <?php while($row=mysqli_fetch_array($query)){?>
                     <option value="<?php echo $row['id_perusahaan']?>"><?php echo $row['id_perusahaan'].$a.$row['nama_perusahaan'];?></option>
                     <?php } ?>
+                  </select>
                 </div>
 
-                <button type="submit" class="btn btn-success">SIMPAN</button>
-                <button type="reset" class="btn btn-warning">RESET</button>
+                <button type="submit" name="submit" class="btn btn-success">SIMPAN</button>
+                <button type="reset" name="reset" class="btn btn-warning">RESET</button>
 
               </form>
     </div>

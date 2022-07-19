@@ -71,6 +71,7 @@
                     <?php while($row=mysqli_fetch_array($query)){?>
                     <option value="<?php echo $row['id_perusahaan']?>"><?php echo $row['id_perusahaan'].$a.$row['nama_perusahaan'];?></option>
                     <?php } ?>
+                  </select>
                 </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
