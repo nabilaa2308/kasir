@@ -11,7 +11,6 @@ $id_supplier   = $_POST['id_supplier'];
 $stok          = $_POST['stok'];
 $harga_modal   = $_POST['harga_modal'];
 $harga_jual    = $_POST['harga_jual'];
-
 $tanggal_masuk = $_POST['tanggal_masuk'];
 
 
