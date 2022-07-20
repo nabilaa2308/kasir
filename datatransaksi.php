@@ -66,11 +66,11 @@
                   <tr>
                     <th scope="col">NO.</th>
                     <th scope="col">KODE INV</th>
-                    <th scope="col">WAKTU TRANSAKSI</th>
-                    <th scope="col">ID KASIR</th>
-                    <th scope="col">ID MEMBER</th>
-                    <th scope="col">NAMA PEMBELI</th>
+                    <th scope="col">NAMA KASIR</th>
+                    <th scope="col">NAMA MEMBER</th>
                     <th scope="col">ID METODE PEMBAYARAN</th>
+                    <th scope="col">WAKTU TRANSAKSI</th>
+                    <th scope="col">NAMA PEMBELI</th>
                     <th scope="col">TOTAL BAYAR</th>
                     <th scope="col">PPN</th>
                     <th scope="col">DISKON</th>
@@ -88,11 +88,11 @@
                   <tr>
                       <td><?php echo $no++ ?></td>
                       <td><?php echo $row['kode_inv'] ?></td>
+                      <td><?php echo $row['nama_kasir'] ?></td>
+                      <td><?php echo $row['nama_member'] ?></td>
+                      <td><?php echo $row['nama_metode'] ?></td>
                       <td><?php echo $row['waktu_transaksi'] ?></td>
-                      <td><?php echo $row['id_kasir'] ?></td>
-                      <td><?php echo $row['id_member'] ?></td>
-                      <td><?php echo $row['nama_pembeli'] ?></td>
-                      <td><?php echo $row['id_metode_pembayaran'] ?></td>
+                      <td><?php echo $row['nama_pembeli'] ?></td>                      
                       <td>Rp<?php echo $row['total_bayar'] ?></td>
                       <td><?php echo $row['ppn'] ?></td>
                       <td><?php echo $row['diskon'] ?></td>

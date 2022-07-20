@@ -65,9 +65,8 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID TRANSAKSI DETAIL</th>
-                    <th scope="col">ID TRANSAKSI</th>
-                    <th scope="col">ID BARANG</th>
+                    <th scope="col">KODE INV</th>
+                    <th scope="col">NAMA BARANG</th>
                     <th scope="col">JUMLAH</th>
                     <th scope="col">HARGA JUAL</th>
                     <th scope="col">TOTAL HARGA</th>
@@ -84,9 +83,8 @@
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_transaksi_detail'] ?></td>
-                      <td><?php echo $row['id_transaksi'] ?></td>
-                      <td><?php echo $row['id_barang'] ?></td>
+                      <td><?php echo $row['kode_inv'] ?></td>
+                      <td><?php echo $row['nama_barang'] ?></td>
                       <td><?php echo $row['jumlah'] ?></td>
                       <td>Rp<?php echo $row['harga_jual'] ?></td>
                       <td>Rp<?php echo $row['total_harga'] ?></td>
