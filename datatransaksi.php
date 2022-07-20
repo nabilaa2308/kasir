@@ -68,7 +68,7 @@
                     <th scope="col">KODE INV</th>
                     <th scope="col">NAMA KASIR</th>
                     <th scope="col">NAMA MEMBER</th>
-                    <th scope="col">ID METODE PEMBAYARAN</th>
+                    <th scope="col">METODE PEMBAYARAN</th>
                     <th scope="col">WAKTU TRANSAKSI</th>
                     <th scope="col">NAMA PEMBELI</th>
                     <th scope="col">TOTAL BAYAR</th>
