@@ -45,11 +45,6 @@
                 </div>
                 
                 <div class="form-group">
-                  <label>waktu Transaksi</label>
-                  <input type="time" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" placeholder="Masukkan Waktu Transaksi" class="form-control">
-                </div>
-                
-                <div class="form-group">
                   <label>ID Kasir</label>
                   <input type="text" name="id_kasir" value="<?php echo $row['id_kasir'] ?>" placeholder="Masukkan ID Kasir" class="form-control">
                 </div>
@@ -60,13 +55,18 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Nama Pembeli</label>
-                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" placeholder="Masukkan Nama Pembeli" class="form-control">
+                  <label>ID Metode Pembayaran</label>
+                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
+                  <label>waktu Transaksi</label>
+                  <input type="time" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" placeholder="Masukkan Waktu Transaksi" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Nama Pembeli</label>
+                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" placeholder="Masukkan Nama Pembeli" class="form-control">
                 </div>
 
                 <div class="form-group">

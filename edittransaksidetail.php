@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit Transaksi</title>
+    <title>Edit Transaksi Detail </title>
   </head>
 
   <body>
@@ -28,64 +28,42 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT TRANSAKSI
+              EDIT TRANSAKSI DETAIL
             </div>
             <div class="card-body">
               <form action="updatetransaksidetail.php" method="POST">
                 
                 <div class="form-group">
                   <label>ID Transaksi Detail</label>
-                  <input type="text" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi" class="form-control”>
+                  <input type="text" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi Detail" class="form-control”>
                   <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>">
                 </div>
 
                 <div class="form-group">
-                  <label></label>
-                  <input type="text" name="kode_inv" value="<?php echo $row['kode_inv'] ?>" placeholder="Masukkan Kode Inv" class="form-control">
+                  <label>ID Transaksi</label>
+                  <input type="text" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" placeholder="Masukkan ID Transaksi" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                  <label>waktu Transaksi</label>
-                  <input type="time" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" placeholder="Masukkan Waktu Transaksi" class="form-control">
+                  <label>ID Barang</label>
+                  <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" placeholder="Masukkan ID Barang" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                  <label>ID Kasir</label>
-                  <input type="text" name="id_kasir" value="<?php echo $row['id_kasir'] ?>" placeholder="Masukkan ID Kasir" class="form-control">
+                  <label>Jumlah</label>
+                  <input type="text" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan Jumlah" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>ID Member</label>
-                  <input type="text" name="id_member" value="<?php echo $row['id_member'] ?>" placeholder="Masukkan ID Member" class="form-control">
+                  <label>Harga Jual</label>
+                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>Nama Pembeli</label>
-                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" placeholder="Masukkan Nama Pembeli" class="form-control">
+                  <label>Total Harga</label>
+                  <input type="text" name="total_harga" value="<?php echo $row['total_harga'] ?>" placeholder="Masukkan Total Harga" class="form-control">
                 </div>
-
-                <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Total Bayar</label>
-                  <input type="text" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>PPN</label>
-                  <input type="text" name="ppn" value="<?php echo $row['ppn'] ?>" placeholder="Masukkan PPN" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Diskon</label>
-                  <input type="text" name="diskon" value="<?php echo $row['diskon'] ?>" placeholder="Masukkan Diskon" class="form-control">
-                </div>
-
-                
-                
+         
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

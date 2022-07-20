@@ -27,11 +27,6 @@
                   <label>Kode Inv</label>
                   <input type="text" name="kode_inv" placeholder="Masukkan Kode Inv" class="form-control">
                 </div>
-
-                <div class="form-group">
-                  <label>Waktu Transaksi</label>
-                  <input type="time" name="waktu_transaksi" placeholder="Masukkan Waktu Transaksi" class="form-control">
-                </div>
                 
                 <div class="form-group">
                   <label>ID Kasir</label>
@@ -39,8 +34,18 @@
                 </div>
 
                 <div class="form-group">
+                  <label>ID Metode Pembayaran</label>
+                  <input type="text" name="id_metode_pembayaran" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
+                </div>
+                
+                <div class="form-group">
                   <label>ID Member</label>
                   <input type="text" name="id_member" placeholder="Masukkan ID Member" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label>Waktu Transaksi</label>
+                  <input type="time" name="waktu_transaksi" placeholder="Masukkan Waktu Transaksi" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -48,10 +53,7 @@
                   <input type="text" name="nama_pembeli" placeholder="Masukkan Nama Pembeli" class="form-control">
                 </div>
 
-                <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
-                </div>
+                
 
                 <div class="form-group">
                   <label>Total Bayar</label>

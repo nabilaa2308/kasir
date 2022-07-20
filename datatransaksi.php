@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
+        </li>
       </form>
     </div>
   </div>
@@ -62,7 +65,6 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID TRANSAKSI</th>
                     <th scope="col">KODE INV</th>
                     <th scope="col">WAKTU TRANSAKSI</th>
                     <th scope="col">ID KASIR</th>
@@ -79,20 +81,19 @@
                   <?php 
                       include('koneksi.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM transaksi");
+                      $query = mysqli_query($connection,"SELECT * FROM transaksi INNER JOIN kasir ON kasir.id_kasir=transaksi.id_kasir INNER JOIN member ON member.id_member=transaksi.id_member INNER JOIN metode_pembayaran ON metode_pembayaran.id_metode_pembayaran=transaksi.id_metode_pembayaran");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_transaksi'] ?></td>
                       <td><?php echo $row['kode_inv'] ?></td>
                       <td><?php echo $row['waktu_transaksi'] ?></td>
                       <td><?php echo $row['id_kasir'] ?></td>
                       <td><?php echo $row['id_member'] ?></td>
                       <td><?php echo $row['nama_pembeli'] ?></td>
                       <td><?php echo $row['id_metode_pembayaran'] ?></td>
-                      <td><?php echo $row['total_bayar'] ?></td>
+                      <td>Rp<?php echo $row['total_bayar'] ?></td>
                       <td><?php echo $row['ppn'] ?></td>
                       <td><?php echo $row['diskon'] ?></td>
                       <td class="text-center">

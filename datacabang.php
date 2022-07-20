@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
+        </li>
       </form>
     </div>
   </div>
@@ -62,12 +65,11 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID CABANG</th>
                     <th scope="col">NAMA CABANG</th>
                     <th scope="col">ALAMAT</th>
                     <th scope="col">NOMOR TELEPON</th>
                     <th scope="col">EMAIL</th>
-                    <th scope="col">ID PERUSAHAAN</th>
+                    <th scope="col">NAMA PERUSAHAAN</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
@@ -75,18 +77,17 @@
                   <?php 
                       include('koneksi.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM cabang");
+                      $query = mysqli_query($connection,"SELECT * FROM cabang INNER JOIN perusahaan ON perusahaan.id_perusahaan=cabang.id_cabang ");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_cabang'] ?></td>
                       <td><?php echo $row['nama_cabang'] ?></td>
                       <td><?php echo $row['alamat'] ?></td>
                       <td><?php echo $row['nomor_telp'] ?></td>
                       <td><?php echo $row['email'] ?></td>
-                      <td><?php echo $row['id_perusahaan'] ?></td>
+                      <td><?php echo $row['nama_perusahaan'] ?></td>
                       <td class="text-center">
                         <a href="editcabang.php?id=<?php echo $row['id_cabang'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapuscabang.php?id=<?php echo $row['id_cabang'] ?>" class="btn btn-sm btn-danger">HAPUS</a>

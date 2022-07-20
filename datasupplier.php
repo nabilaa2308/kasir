@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
+        </li>
       </form>
     </div>
   </div>
@@ -62,7 +65,6 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID SUPPLIER</th>
                     <th scope="col">NAMA SUPPLIER</th>
                     <th scope="col">NOMOR TELEPON</th>
                     <th scope="col">ALAMAT</th>
@@ -80,7 +82,6 @@
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_supplier'] ?></td>
                       <td><?php echo $row['nama_supplier'] ?></td>
                       <td><?php echo $row['nomor_telp'] ?></td>
                       <td><?php echo $row['alamat'] ?></td>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-<title>Data Member</title>
+<title>Data Transaksi Detail</title>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,18 +57,20 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              DATA MEMBER
+              DATA TRANSAKSI DETAIL
             </div>
             <div class="card-body">
-              <a href="tambahmember.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <a href="tambahtransaksidetail.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">NAMA MEMBER</th>
-                    <th scope="col">NOMOR TELEPON</th>
-                    <th scope="col">ALAMAT</th>
-                    <th scope="col">JENIS KELAMIN</th>
+                    <th scope="col">ID TRANSAKSI DETAIL</th>
+                    <th scope="col">ID TRANSAKSI</th>
+                    <th scope="col">ID BARANG</th>
+                    <th scope="col">JUMLAH</th>
+                    <th scope="col">HARGA JUAL</th>
+                    <th scope="col">TOTAL HARGA</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
@@ -76,19 +78,21 @@
                   <?php 
                       include('koneksi.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM member");
+                      $query = mysqli_query($connection,"SELECT * FROM transaksi_detail INNER JOIN transaksi ON transaksi.id_transaksi=transaksi_detail.id_transaksi INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['nama_member'] ?></td>
-                      <td><?php echo $row['nomor_telp'] ?></td>
-                      <td><?php echo $row['alamat'] ?></td>
-                      <td><?php echo $row['jenis_kelamin'] ?></td>
+                      <td><?php echo $row['id_transaksi_detail'] ?></td>
+                      <td><?php echo $row['id_transaksi'] ?></td>
+                      <td><?php echo $row['id_barang'] ?></td>
+                      <td><?php echo $row['jumlah'] ?></td>
+                      <td>Rp<?php echo $row['harga_jual'] ?></td>
+                      <td>Rp<?php echo $row['total_harga'] ?></td>
                       <td class="text-center">
-                        <a href="editmember.php?id=<?php echo $row['id_member'] ?>" class="btn btn-sm btn-primary">EDIT</a>
-                        <a href="hapusmember.php?id=<?php echo $row['id_member'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="edittransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                        <a href="hapustransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
                       </td>
                   </tr>
 

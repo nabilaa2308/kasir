@@ -41,6 +41,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
+        </li>
       </form>
     </div>
   </div>
@@ -62,7 +65,6 @@
                 <thead>
                   <tr>
                     <th scope="col">NO.</th>
-                    <th scope="col">ID METODE PEMBAYARAN</th>
                     <th scope="col">NAMA METODE PEMBAYARAN</th>
                     <th scope="col">AKSI</th>
                   </tr>
@@ -77,7 +79,6 @@
 
                   <tr>
                       <td><?php echo $no++ ?></td>
-                      <td><?php echo $row['id_metode_pembayaran'] ?></td>
                       <td><?php echo $row['nama_metode'] ?></td>
                       <td class="text-center">
                         <a href="editmetodebayar.php?id=<?php echo $row['id_metode_pembayaran'] ?>" class="btn btn-sm btn-primary">EDIT</a>
