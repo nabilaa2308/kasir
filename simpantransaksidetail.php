@@ -4,12 +4,13 @@
 include('koneksi.php');
 
 //get data dari form
-$id_transaksi_detail     = $_POST['id_transaksi_detail'];
-$id_transaksi     = $_POST['id_transaksi'];
-$id_barang   = $_POST['id_barang'];
-$jumlah      = $_POST['jumlah'];
-$harga_jual          = $_POST['harga_jual'];
-$total_harga  = $_POST['total_harga'];
+$id_transaksi_detail  = $_POST['id_transaksi_detail'];
+$id_transaksi         = $_POST['id_transaksi'];
+$id_barang            = $_POST['id_barang'];
+$jumlah               = $_POST['jumlah'];
+$harga_jual           = $_POST['harga_jual'];
+$total_harga          = $jumlah * $harga_jual;
+
 
 
 //query insert data ke dalam database

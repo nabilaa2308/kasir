@@ -43,10 +43,6 @@
                   <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual" class="form-control">
                 </div> 
 
-                <div class="form-group">
-                  <label>Total Harga</label>
-                  <input type="text" name="total_harga" placeholder="Masukkan Total Harga" class="form-control">
-                </div>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>

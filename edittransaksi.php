@@ -46,17 +46,47 @@
                 
                 <div class="form-group">
                   <label>ID Kasir</label>
-                  <input type="text" name="id_kasir" value="<?php echo $row['id_kasir'] ?>" placeholder="Masukkan ID Kasir" class="form-control">
+                  <?php
+                    include 'koneksi.php';
+                  $sql= " SELECT * FROM kasir ";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_kasir" class="form-control">
+                    <?php while($row=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row['id_kasir']?>"><?php echo $row['id_kasir'].$a.$row['nama_kasir'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
 
                 <div class="form-group">
                   <label>ID Member</label>
-                  <input type="text" name="id_member" value="<?php echo $row['id_member'] ?>" placeholder="Masukkan ID Member" class="form-control">
+                  <?php
+                    include 'koneksi.php';
+                  $sql= " SELECT * FROM member";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_member" class="form-control">
+                    <?php while($row=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row['id_member']?>"><?php echo $row['id_member'].$a.$row['nama_member'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
 
                 <div class="form-group">
                   <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
+                  <?php
+                    include 'koneksi.php';
+                  $sql= " SELECT * FROM metode_pembayaran";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_metode_pembayaran" class="form-control">
+                    <?php while($row=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row['id_metode_pembayaran']?>"><?php echo $row['id_metode_pembayaran'].$a.$row['nama_metode'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
 
                 <div class="form-group">
