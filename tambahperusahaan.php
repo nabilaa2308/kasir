@@ -17,10 +17,7 @@
             </div>
             <div class="card-body">
               <form action="simpanperusahaan.php" method="POST">
-                <div class="form-group">
-                  <label>ID Perusahaan</label>
-                  <input type="text" name="id_perusahaan" placeholder="Masukkan ID Perusahaan" class="form-control">
-                </div>
+
 
                 <div class="form-group">
                   <label>Nama Perusahaan</label>

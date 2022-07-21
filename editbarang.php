@@ -34,12 +34,6 @@
               <form action="updatebarang.php" method="POST">
                 
                 <div class="form-group">
-                  <label>ID Barang</label>
-                  <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" >
-                  <input type="hidden" name="id_barang" value="<?php echo $row['id_barang'] ?>"/>
-                </div>
-                
-                <div class="form-group">
                   <label>Nama Barang</label>
                   <input type="text" name="nama_barang" value="<?php echo $row['nama_barang'] ?>" class="form-control">
                 </div>

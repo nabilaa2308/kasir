@@ -17,10 +17,6 @@
             </div>
             <div class="card-body">
               <form action="simpankasir.php" method="POST">
-                <div class="form-group">
-                  <label>ID Kasir</label>
-                  <input type="text" name="id_kasir" placeholder="Masukkan ID Kasir" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Kasir</label>
@@ -47,7 +43,7 @@
 
 
                 <div class="form-group">
-                  <label>ID Cabang</label>
+                  <label>Cabang</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM cabang ";

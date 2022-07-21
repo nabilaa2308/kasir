@@ -4,8 +4,8 @@
 include('koneksi.php');
 
 //get data dari form
-$id_metode_pembayaran     = $_POST['id_metode_pembayaran'];
-$nama_metode   = $_POST['nama_metode'];
+$id_metode_pembayaran = $_POST['id_metode_pembayaran'];
+$nama_metode          = $_POST['nama_metode'];
 
 //query insert data ke dalam database
 $query = "INSERT INTO metode_pembayaran (id_metode_pembayaran, nama_metode) VALUES ('$id_metode_pembayaran', '$nama_metode')";

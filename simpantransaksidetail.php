@@ -14,7 +14,7 @@ $total_harga          = $jumlah * $harga_jual;
 
 
 //query insert data ke dalam database
-$query = "INSERT INTO transaksi_detail (id_transaksi_detail, id_transaksi id_barang, jumlah, harga_jual, total_harga) VALUES ('$id_transaksi_detail', '$id_transaksi '$id_barang', '$jumlah', '$harga_jual', '$total_harga')";
+$query = "INSERT INTO transaksi_detail (id_transaksi_detail, id_transaksi, id_barang, jumlah, harga_jual, total_harga) VALUES ('$id_transaksi_detail', '$id_transaksi', '$id_barang', '$jumlah', '$harga_jual', '$total_harga')";
 
 //kondisi pengecekan apakah data berhasil dimasukkan atau tidak
 if($connection->query($query)) {

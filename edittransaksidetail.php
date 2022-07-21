@@ -34,29 +34,43 @@
               <form action="updatetransaksidetail.php" method="POST">
                 
                 <div class="form-group">
-                  <label>ID Transaksi Detail</label>
-                  <input type="text" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi Detail" class="form-control”>
-                  <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>">
-                </div>
-
-                <div class="form-group">
-                  <label>ID Transaksi</label>
-                  <input type="text" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" placeholder="Masukkan ID Transaksi" class="form-control">
+                  <label>Kode INV</label>
+                  <?php
+                    include 'koneksi.php';
+                  $sql= " SELECT * FROM transaksi ";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_transaksi" class="form-control">
+                    <?php while($row=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row['id_transaksi']?>"><?php echo $row['id_transaksi'].$a.$row['kode_inv'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
                 
                 <div class="form-group">
-                  <label>ID Barang</label>
-                  <input type="text" name="id_barang" value="<?php echo $row['id_barang'] ?>" placeholder="Masukkan ID Barang" class="form-control">
+                  <label>Barang</label>
+                  <?php
+                    include 'koneksi.php';
+                  $sql= " SELECT * FROM barang ";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_barang" class="form-control">
+                    <?php while($row=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row['id_barang']?>"><?php echo $row['id_barang'].$a.$row['nama_barang'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
                 
                 <div class="form-group">
                   <label>Jumlah</label>
-                  <input type="text" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan Jumlah" class="form-control">
+                  <input type="number" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan Jumlah" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
+                  <input type="number" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
                 </div>
 
          

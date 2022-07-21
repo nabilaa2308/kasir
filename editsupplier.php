@@ -32,12 +32,6 @@
             </div>
             <div class="card-body">
               <form action="updatesupplier.php" method="POST">
-                
-                <div class="form-group">
-                  <label>ID Supplier</label>
-                  <input type="text" name="id_supplier" value="<?php echo $row['id_supplier'] ?>" placeholder="Masukkan ID Supplier" class="form-control”>
-                  <input type="hidden" name="id_supplier" value="<?php echo $row['id_supplier'] ?>">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Supplier</label>

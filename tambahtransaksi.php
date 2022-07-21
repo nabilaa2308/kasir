@@ -18,10 +18,6 @@
             </div>
             <div class="card-body">
               <form action="simpantransaksi.php" method="POST">
-                <div class="form-group">
-                  <label>ID Transaksi</label>
-                  <input type="text" name="id_transaksi" placeholder="Masukkan ID Transaksi" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Kode Inv</label>
@@ -29,10 +25,10 @@
                 </div>
                 
                 <div class="form-group">
-                  <label>ID Kasir</label>
+                  <label>Kasir</label>
                   <?php
                     include 'koneksi.php';
-                  $sql= " SELECT * FROM kasir ";
+                  $sql= " SELECT * FROM kasir";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
                   ?>
@@ -44,10 +40,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
+                  <label>Metode Pembayaran</label>
                   <?php
                     include 'koneksi.php';
-                  $sql= " SELECT * FROM metode_pembayaran ";
+                  $sql= " SELECT * FROM metode_pembayaran";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
                   ?>
@@ -59,10 +55,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label>ID Member</label>
+                  <label>Member</label>
                   <?php
                     include 'koneksi.php';
-                  $sql= " SELECT * FROM member ";
+                  $sql= " SELECT * FROM member";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
                   ?>
@@ -85,17 +81,17 @@
 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="text" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
+                  <input type="number" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>PPN</label>
-                  <input type="text" name="ppn" placeholder="Masukkan PPN" class="form-control">
+                  <input type="number" name="ppn" placeholder="Masukkan PPN" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Diskon</label>
-                  <input type="text" name="diskon" placeholder="Masukkan Diskon" class="form-control">
+                  <input type="number" name="diskon" placeholder="Masukkan Diskon" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

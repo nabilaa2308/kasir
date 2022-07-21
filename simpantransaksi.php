@@ -4,16 +4,16 @@
 include('koneksi.php');
 
 //get data dari form
-$id_transaksi     = $_POST['id_transaksi'];
-$kode_inv   = $_POST['kode_inv'];
-$id_kasir          = $_POST['id_kasir'];
-$id_member  = $_POST['id_member'];
-$id_metode_pembayaran  = $_POST['id_metode_pembayaran'];
+$id_transaksi         = $_POST['id_transaksi'];
+$kode_inv             = $_POST['kode_inv'];
+$id_kasir             = $_POST['id_kasir'];
+$id_member            = $_POST['id_member'];
+$id_metode_pembayaran = $_POST['id_metode_pembayaran'];
 $waktu_transaksi      = $_POST['waktu_transaksi'];
-$nama_pembeli  = $_POST['nama_pembeli'];
-$total_bayar  = $_POST['total_bayar'];
-$ppn  = $_POST['ppn'];
-$diskon  = $_POST['diskon'];
+$nama_pembeli         = $_POST['nama_pembeli'];
+$total_bayar          = $_POST['total_bayar'];
+$ppn                  = $_POST['ppn'];
+$diskon               = $_POST['diskon'];
 
 
 //query insert data ke dalam database

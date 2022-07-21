@@ -4,13 +4,13 @@
 include('koneksi.php');
 
 //get data dari form
-$id_perusahaan     = $_POST['id_perusahaan'];
-$nama_perusahaan   = $_POST['nama_perusahaan'];
-$alamat        = $_POST['alamat'];
-$nomor_telp    = $_POST['nomor_telp'];
-$email         = $_POST['email'];
+$id_perusahaan   = $_POST['id_perusahaan'];
+$nama_perusahaan = $_POST['nama_perusahaan'];
+$alamat          = $_POST['alamat'];
+$nomor_telp      = $_POST['nomor_telp'];
+$email           = $_POST['email'];
 $tanggal_berdiri = $_POST['tanggal_berdiri'];
-$npwp         = $_POST['npwp'];
+$npwp            = $_POST['npwp'];
 
 //query insert data ke dalam database
 $query = "INSERT INTO perusahaan (id_perusahaan, nama_perusahaan, alamat, nomor_telp, email, tanggal_berdiri, npwp) VALUES ('$id_perusahaan', '$nama_perusahaan', '$alamat', '$nomor_telp', '$email', '$tanggal_berdiri', '$npwp')";

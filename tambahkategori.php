@@ -17,10 +17,6 @@
             </div>
             <div class="card-body">
               <form action="simpankategori.php" method="POST">
-                <div class="form-group">
-                  <label>ID Kategori</label>
-                  <input type="text" name="id_kategori" placeholder="Masukkan ID Kategori" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Kategori</label>

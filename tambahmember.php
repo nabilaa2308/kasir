@@ -17,10 +17,6 @@
             </div>
             <div class="card-body">
               <form action="simpanmember.php" method="POST">
-                <div class="form-group">
-                  <label>ID Member</label>
-                  <input type="text" name="id_member" placeholder="Masukkan ID Member" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Member</label>

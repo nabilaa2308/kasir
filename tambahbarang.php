@@ -18,10 +18,6 @@
             </div>
             <div class="card-body">
               <form action="simpanbarang.php" method="POST">
-                <div class="form-group">
-                  <label>ID Barang</label>
-                  <input type="text" name="id_barang" placeholder="Masukkan ID Barang" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Barang</label>
@@ -29,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label>ID Kategori</label>
+                  <label>Kategori</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM kategori ";
@@ -44,7 +40,7 @@
                 </div>
                 
                 <div class="form-group">
-                  <label>ID Supplier</label>
+                  <label>Supplier</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM supplier ";
@@ -65,12 +61,12 @@
                 
                 <div class="form-group">
                   <label>Harga Modal</label>
-                  <input type="text" name="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
+                  <input type="number" name="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
+                  <input type="number" name="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
                 </div>
                       
                 <div class="form-group">

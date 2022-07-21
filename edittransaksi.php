@@ -32,20 +32,14 @@
             </div>
             <div class="card-body">
               <form action="updatetransaksi.php" method="POST">
-                
-                <div class="form-group">
-                  <label>ID Transaksi</label>
-                  <input type="text" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" placeholder="Masukkan ID Transaksi" class="form-control”>
-                  <input type="hidden" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>">
-                </div>
 
                 <div class="form-group">
-                  <label>Kode Inv</label>
+                  <label>Kode INV</label>
                   <input type="text" name="kode_inv" value="<?php echo $row['kode_inv'] ?>" placeholder="Masukkan Kode Inv" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                  <label>ID Kasir</label>
+                  <label>Kasir</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM kasir ";
@@ -60,7 +54,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label>ID Member</label>
+                  <label>Member</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM member";
@@ -75,7 +69,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
+                  <label>Metode Pembayaran</label>
                   <?php
                     include 'koneksi.php';
                   $sql= " SELECT * FROM metode_pembayaran";
@@ -101,17 +95,17 @@
 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="text" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
+                  <input type="number" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>PPN</label>
-                  <input type="text" name="ppn" value="<?php echo $row['ppn'] ?>" placeholder="Masukkan PPN" class="form-control">
+                  <input type="number" name="ppn" value="<?php echo $row['ppn'] ?>" placeholder="Masukkan PPN" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Diskon</label>
-                  <input type="text" name="diskon" value="<?php echo $row['diskon'] ?>" placeholder="Masukkan Diskon" class="form-control">
+                  <input type="number" name="diskon" value="<?php echo $row['diskon'] ?>" placeholder="Masukkan Diskon" class="form-control">
                 </div>
 
                 

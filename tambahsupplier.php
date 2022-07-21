@@ -18,10 +18,6 @@
             </div>
             <div class="card-body">
               <form action="simpansupplier.php" method="POST">
-                <div class="form-group">
-                  <label>ID Supplier</label>
-                  <input type="text" name="id_supplier" placeholder="Masukkan ID Supplier" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Nama Supplier</label>

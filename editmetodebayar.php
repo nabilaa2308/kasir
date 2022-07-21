@@ -32,12 +32,6 @@
             </div>
             <div class="card-body">
               <form action="updatemetodebayar.php" method="POST">
-                
-                <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>" placeholder="Masukkan ID Metode Pembayaran" class="form-control”>
-                  <input type="hidden" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>"/>
-                </div>
 
                 <div class="form-group">
                   <label>Metode Pembayaran</label>

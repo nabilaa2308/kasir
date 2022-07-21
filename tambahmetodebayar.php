@@ -17,10 +17,6 @@
             </div>
             <div class="card-body">
               <form action="simpanmetodebayar.php" method="POST">
-                <div class="form-group">
-                  <label>ID Metode Pembayaran</label>
-                  <input type="text" name="id_metode_pembayaran" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
-                </div>
 
                 <div class="form-group">
                   <label>Metode Pembayaran</label>
