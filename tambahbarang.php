@@ -19,6 +19,10 @@
             <div class="card-body">
               <form action="simpanbarang.php" method="POST">
 
+              <div class="form-group">
+                  <input type="hidden" name="id_barang" class="form-control">
+                </div>
+
                 <div class="form-group">
                   <label>Nama Barang</label>
                   <input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" class="form-control">
@@ -56,7 +60,7 @@
 
                 <div class="form-group">
                   <label>Stok</label>
-                  <input class="form-control" name="stok" placeholder="Masukkan Stok Barang" class="form-control">
+                  <input type="number" name="stok" placeholder="Masukkan Stok Barang" class="form-control">
                 </div>
                 
                 <div class="form-group">

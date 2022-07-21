@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM metode_pembayaran WHERE id_metode_pembayaran = $id LIMIT 1";
+  $query = "SELECT * FROM metode_pembayaran WHERE id_metode_pembayaran =$id";
 
   $result = mysqli_query($connection, $query);
 
@@ -34,8 +34,12 @@
               <form action="updatemetodebayar.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_metode_pembayaran" value="<?php echo $row['id_metode_pembayaran'] ?>"  class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Metode Pembayaran</label>
-                  <input type="text" name="nama_metode" value="<?php echo $row['nama_metode'] ?>" placeholder="Masukkan Nama Metode" class="form-control">
+                  <input type="text" name="nama_metode" value="<?php echo $row['nama_metode'] ?>" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>

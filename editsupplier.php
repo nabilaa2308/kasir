@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM supplier WHERE id_supplier = $id LIMIT 1";
+  $query = "SELECT * FROM supplier WHERE id_supplier =$id";
 
   $result = mysqli_query($connection, $query);
 
@@ -34,23 +34,27 @@
               <form action="updatesupplier.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_supplier" value="<?php echo $row['id_supplier'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Nama Supplier</label>
-                  <input type="text" name="nama_supplier" value="<?php echo $row['nama_supplier'] ?>" placeholder="Masukkan Nama Supplier" class="form-control">
+                  <input type="text" name="nama_supplier" value="<?php echo $row['nama_supplier'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
                   <label>Nomor Telepon</label>
-                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" placeholder="Masukkan Nomor Telpon Supplier" class="form-control">
+                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
                   <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Supplier" rows="4"><?php echo $row['alamat'] ?></textarea>
+                  <textarea class="form-control" name="alamat" rows="4"><?php echo $row['alamat'] ?></textarea>
                 </div>
 
                 <div class="form-group">
                   <label>Nomor Rekening</label>
-                  <input type="text" name="nomor_rekening" value="<?php echo $row['nomor_rekening'] ?>" placeholder="Masukkan Nomor Rekening Supplier" class="form-control">
+                  <input type="text" name="nomor_rekening" value="<?php echo $row['nomor_rekening'] ?>" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>

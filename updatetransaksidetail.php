@@ -12,7 +12,7 @@ $harga_jual          = $_POST['harga_jual'];
 $total_harga         = $_POST['total_harga'];
 
 //query update data ke dalam database berdasarkan ID
-$query = "UPDATE transaksi_detail SET id_transaksi ='$id_transaksi', id_barang = '$id_barang', jumlah = '$jumlah', harga_jual = '$harga_jual' total_harga = '$total_harga' WHERE id_transaksi_detail = '$id_transaksi_detail'";
+$query = "UPDATE transaksi_detail SET id_transaksi ='$id_transaksi', id_barang = '$id_barang', jumlah = '$jumlah', harga_jual = '$harga_jual', total_harga = '$total_harga' WHERE id_transaksi_detail = '$id_transaksi_detail'";
 
 //kondisi pengecekan apakah data berhasil diupdate atau tidak
 if($connection->query($query)) {

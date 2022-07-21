@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM kategori WHERE id_kategori = $id LIMIT 1";
+  $query = "SELECT * FROM kategori WHERE id_kategori = $id";
 
   $result = mysqli_query($connection, $query);
 
@@ -18,7 +18,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Edit Barang</title>
+    <title>Edit Kategori</title>
   </head>
 
   <body>
@@ -28,14 +28,18 @@
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              EDIT SUPPLIER
+              EDIT KATEGORI
             </div>
             <div class="card-body">
               <form action="updatekategori.php" method="POST">
 
+              <div class="form-group">
+                  <input type="hidden" name="id_kategori" value="<?php echo $row['id_kategori'] ?>" class="form-control">
+                </div>
+
                 <div class="form-group">
                   <label>Nama Kategori</label>
-                  <input type="text" name="nama_kategori" value="<?php echo $row['nama_kategori'] ?>" placeholder="Masukkan Nama Kategori" class="form-control">
+                  <input type="text" name="nama_kategori" value="<?php echo $row['nama_kategori'] ?>" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>

@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM transaksi WHERE id_transaksi = $id LIMIT 1";
+  $query = "SELECT * FROM transaksi WHERE id_transaksi =$id";
 
   $result = mysqli_query($connection, $query);
 
@@ -34,8 +34,12 @@
               <form action="updatetransaksi.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_transaksi" value="<?php echo $row['id_transaksi'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Kode INV</label>
-                  <input type="text" name="kode_inv" value="<?php echo $row['kode_inv'] ?>" placeholder="Masukkan Kode Inv" class="form-control">
+                  <input type="text" name="kode_inv" value="<?php echo $row['kode_inv'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
@@ -47,8 +51,8 @@
                   $a=". ";
                   ?>
                   <select name="id_kasir" class="form-control">
-                    <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_kasir']?>"><?php echo $row['id_kasir'].$a.$row['nama_kasir'];?></option>
+                    <?php while($row3=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row3['id_kasir']?>"><?php echo $row3['id_kasir'].$a.$row3['nama_kasir'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -62,8 +66,8 @@
                   $a=". ";
                   ?>
                   <select name="id_member" class="form-control">
-                    <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_member']?>"><?php echo $row['id_member'].$a.$row['nama_member'];?></option>
+                    <?php while($row1=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row1['id_member']?>"><?php echo $row1['id_member'].$a.$row1['nama_member'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -77,20 +81,20 @@
                   $a=". ";
                   ?>
                   <select name="id_metode_pembayaran" class="form-control">
-                    <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_metode_pembayaran']?>"><?php echo $row['id_metode_pembayaran'].$a.$row['nama_metode'];?></option>
+                    <?php while($row2=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row2['id_metode_pembayaran']?>"><?php echo $row2['id_metode_pembayaran'].$a.$row2['nama_metode'];?></option>
                     <?php } ?>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label>waktu Transaksi</label>
-                  <input type="time" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" placeholder="Masukkan Waktu Transaksi" class="form-control">
+                  <input type="time" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Nama Pembeli</label>
-                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" placeholder="Masukkan Nama Pembeli" class="form-control">
+                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -100,16 +104,14 @@
 
                 <div class="form-group">
                   <label>PPN</label>
-                  <input type="number" name="ppn" value="<?php echo $row['ppn'] ?>" placeholder="Masukkan PPN" class="form-control">
+                  <input type="number" name="ppn" value="<?php echo $row['ppn'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Diskon</label>
-                  <input type="number" name="diskon" value="<?php echo $row['diskon'] ?>" placeholder="Masukkan Diskon" class="form-control">
+                  <input type="number" name="diskon" value="<?php echo $row['diskon'] ?>" class="form-control">
                 </div>
 
-                
-                
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
 

@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM kasir WHERE id_kasir = $id LIMIT 1";
+  $query = "SELECT * FROM kasir WHERE id_kasir =$id";
 
   $result = mysqli_query($connection, $query);
 
@@ -34,13 +34,17 @@
               <form action="updatekasir.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_kasir" value="<?php echo $row['id_kasir'] ?>" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Nama Kasir</label>
-                  <input type="text" name="nama_kasir" value="<?php echo $row['nama_kasir'] ?>" placeholder="Masukkan Nama Kasir" class="form-control">
+                  <input type="text" name="nama_kasir" value="<?php echo $row['nama_kasir'] ?>" class="form-control">
                 </div>  
                 
                 <div class="form-group">
                   <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Kasir" rows="4"><?php echo $row['alamat'] ?></textarea>
+                  <textarea class="form-control" name="alamat" rows="4"><?php echo $row['alamat'] ?></textarea>
                 </div>
 
                 <div class="form-group">
@@ -53,7 +57,7 @@
 
                 <div class="form-group">
                   <label>Nomor Telepon</label>
-                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" placeholder="Masukkan Nomor Telpon Kasir" class="form-control">
+                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">

@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM cabang WHERE id_cabang = $id LIMIT 1";
+  $query = "SELECT * FROM cabang WHERE id_cabang =$id";
 
   $result = mysqli_query($connection, $query);
 
@@ -33,24 +33,28 @@
             <div class="card-body">
               <form action="updatecabang.php" method="POST">
 
+              <div class="form-group">
+                  <input type="hidden" name="id_cabang" value="<?php echo $row['id_cabang'] ?>" class="form-control">
+                </div>  
+
                 <div class="form-group">
                   <label>Nama Cabang</label>
-                  <input type="text" name="nama_cabang" value="<?php echo $row['nama_cabang'] ?>" placeholder="Masukkan Nama Cabang" class="form-control">
+                  <input type="text" name="nama_cabang" value="<?php echo $row['nama_cabang'] ?>" class="form-control">
                 </div>  
                 
                 <div class="form-group">
                   <label>Alamat</label>
-                  <textarea class="form-control" name="alamat" placeholder="Masukkan Alamat Cabang" rows="4"><?php echo $row['alamat'] ?></textarea>
+                  <textarea class="form-control" name="alamat" rows="4"><?php echo $row['alamat'] ?></textarea>
                 </div>
 
                 <div class="form-group">
                   <label>Nomor Telepon</label>
-                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" placeholder="Masukkan Nomor Telpon Cabang" class="form-control">
+                  <input type="text" name="nomor_telp" value="<?php echo $row['nomor_telp'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Email</label>
-                  <input type="text" name="email" value="<?php echo $row['email'] ?>" placeholder="Masukkan Email Cabang" class="form-control">
+                  <input type="text" name="email" value="<?php echo $row['email'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
