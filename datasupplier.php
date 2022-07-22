@@ -40,10 +40,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
-        </li>
       </form>
     </div>
   </div>

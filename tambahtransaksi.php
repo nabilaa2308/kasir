@@ -70,8 +70,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label>Waktu Transaksi</label>
-                  <input type="time" name="waktu_transaksi" placeholder="Masukkan Waktu Transaksi" class="form-control">
+                  <input type="hidden" name="waktu_transaksi" placeholder="Masukkan Waktu Transaksi" class="form-control">
                 </div>
 
                 <div class="form-group">

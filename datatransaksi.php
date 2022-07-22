@@ -41,9 +41,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="datatransaksi.php">TRANSAKSI</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="datatransaksidetail.php">TRANSAKSI DETAIL</a>
-        </li>
       </form>
     </div>
   </div>
@@ -93,12 +90,13 @@
                       <td><?php echo $row['nama_metode'] ?></td>
                       <td><?php echo $row['waktu_transaksi'] ?></td>
                       <td><?php echo $row['nama_pembeli'] ?></td>                      
-                      <td>Rp<?php echo $row['total_bayar'] ?></td>
                       <td><?php echo $row['ppn'] ?></td>
-                      <td><?php echo $row['diskon'] ?></td>
+                      <td><?php echo $row['diskon'] ?></td>                
+                      <td>Rp<?php echo $row['total_bayar'] ?></td>
                       <td class="text-center">
                         <a href="edittransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="datatransaksidetail.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-info">DETAIL</a>
                       </td>
                   </tr>
 
