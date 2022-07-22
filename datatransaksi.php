@@ -72,8 +72,8 @@
                     <th scope="col">WAKTU TRANSAKSI</th>
                     <th scope="col">NAMA PEMBELI</th>
                     <th scope="col">TOTAL BAYAR</th>
-                    <th scope="col">PPN</th>
-                    <th scope="col">DISKON</th>
+                    <th scope="col">PPN %</th>
+                    <th scope="col">DISKON %</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>

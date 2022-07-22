@@ -85,12 +85,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label>PPN</label>
+                  <label>PPN %</label>
                   <input type="number" name="ppn" placeholder="Masukkan PPN" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>Diskon</label>
+                  <label>Diskon %</label>
                   <input type="number" name="diskon" placeholder="Masukkan Diskon" class="form-control">
                 </div>
 
