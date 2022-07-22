@@ -19,6 +19,10 @@
               <form action="simpanmember.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_member" placeholder="Masukkan ID Member" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Nama Member</label>
                   <input type="text" name="nama_member" placeholder="Masukkan Nama Member" class="form-control">
                 </div>

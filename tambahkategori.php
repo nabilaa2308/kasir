@@ -18,10 +18,13 @@
             <div class="card-body">
               <form action="simpankategori.php" method="POST">
 
+              <div class="form-group">
+                  <input type="hidden" name="id_kategori" placeholder="Masukkan ID Kategori" class="form-control">
+                </div>
+
                 <div class="form-group">
                   <label>Nama Kategori</label>
                   <input type="text" name="nama_kategori" placeholder="Masukkan Nama Kategori" class="form-control">
-
                 </div>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>

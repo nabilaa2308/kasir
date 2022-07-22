@@ -19,6 +19,10 @@
               <form action="simpancabang.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_cabang" placeholder="Masukkan ID Cabang" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Nama Cabang</label>
                   <input type="text" name="nama_cabang" placeholder="Masukkan Nama Cabang" class="form-control">
                 </div>

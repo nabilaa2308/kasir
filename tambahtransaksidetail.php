@@ -20,6 +20,10 @@
               <form action="simpantransaksidetail.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_transaksi_detail" placeholder="Masukkan ID Transaksi Detail" class="form-control">
+                </div> 
+
+                <div class="form-group">
                   <label>Kode INV</label>
                   <?php
                     include 'koneksi.php';

@@ -19,6 +19,10 @@
             <div class="card-body">
               <form action="simpansupplier.php" method="POST">
 
+              <div class="form-group">
+                  <input type="hidden" name="id_perusahaan" placeholder="Masukkan ID Supplier" class="form-control">
+                </div>
+
                 <div class="form-group">
                   <label>Nama Supplier</label>
                   <input type="text" name="nama_supplier" placeholder="Masukkan Nama Supplier" class="form-control">

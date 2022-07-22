@@ -19,6 +19,10 @@
               <form action="simpanmetodebayar.php" method="POST">
 
                 <div class="form-group">
+                  <input type="hidden" name="id_metode_pembayaran" placeholder="Masukkan ID Metode Pembayaran" class="form-control">
+                </div>
+
+                <div class="form-group">
                   <label>Metode Pembayaran</label>
                   <input type="text" name="nama_metode" placeholder="Masukkan Metode Pembayaran" class="form-control">
                 </div>
