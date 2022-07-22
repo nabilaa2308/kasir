@@ -17,7 +17,7 @@
               TAMBAH TRANSAKSI
             </div>
             <div class="card-body">
-              <form action="simpantransaksi.php" method="POST">
+              <form action="simpantransaksi.php" method="POST">    
 
                 <div class="form-group">
                   <label>Kode Inv</label>
@@ -70,17 +70,7 @@
                 </div>
 
                 <div class="form-group">
-                  <input type="hidden" name="waktu_transaksi" placeholder="Masukkan Waktu Transaksi" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Nama Pembeli</label>
-                  <input type="text" name="nama_pembeli" placeholder="Masukkan Nama Pembeli" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label>Total Bayar</label>
-                  <input type="number" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
+                  <input type="hidden" name="nama_pembeli" placeholder="Masukkan Nama Pembeli" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -93,8 +83,14 @@
                   <input type="number" name="diskon" placeholder="Masukkan Diskon" class="form-control">
                 </div>
 
+                <div class="form-group">
+                  <label>Total Bayar</label>
+                  <input type="number" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
+                </div>
+
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
+                <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
 
               </form>
             </div>

@@ -47,6 +47,7 @@
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
+                <a href="datamember.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
 
               </form>
     </div>

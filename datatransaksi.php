@@ -67,10 +67,9 @@
                     <th scope="col">NAMA MEMBER</th>
                     <th scope="col">METODE PEMBAYARAN</th>
                     <th scope="col">WAKTU TRANSAKSI</th>
-                    <th scope="col">NAMA PEMBELI</th>
-                    <th scope="col">TOTAL BAYAR</th>
                     <th scope="col">PPN%</th>
                     <th scope="col">DISKON%</th>
+                    <th scope="col">TOTAL BAYAR</th>
                     <th scope="col">AKSI</th>
                   </tr>
                 </thead>
@@ -78,7 +77,7 @@
                   <?php 
                       include('koneksi.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM transaksi INNER JOIN kasir ON kasir.id_kasir=transaksi.id_kasir INNER JOIN member ON member.id_member=transaksi.id_member INNER JOIN metode_pembayaran ON metode_pembayaran.id_metode_pembayaran=transaksi.id_metode_pembayaran");
+                      $query = mysqli_query($connection,"SELECT *, DATE_FORMAT(waktu_transaksi, '%W, %d/%m/%Y %H:%i') as waktu FROM transaksi INNER JOIN kasir ON kasir.id_kasir=transaksi.id_kasir INNER JOIN member ON member.id_member=transaksi.id_member INNER JOIN metode_pembayaran ON metode_pembayaran.id_metode_pembayaran=transaksi.id_metode_pembayaran");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
@@ -88,8 +87,7 @@
                       <td><?php echo $row['nama_kasir'] ?></td>
                       <td><?php echo $row['nama_member'] ?></td>
                       <td><?php echo $row['nama_metode'] ?></td>
-                      <td><?php echo $row['waktu_transaksi'] ?></td>
-                      <td><?php echo $row['nama_pembeli'] ?></td>                      
+                      <td><?php echo $row['waktu'] ?></td>
                       <td><?php echo $row['ppn'] ?></td>
                       <td><?php echo $row['diskon'] ?></td>                
                       <td>Rp<?php echo $row['total_bayar'] ?></td>

@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                   <input type="hidden" name="id_transaksi_detail" placeholder="Masukkan ID Transaksi Detail" class="form-control">
-                </div> 
+                </div>
 
                 <div class="form-group">
                   <label>Kode INV</label>
@@ -66,6 +66,8 @@
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
+                <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+
 
               </form>
             </div>

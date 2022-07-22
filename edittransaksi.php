@@ -87,13 +87,9 @@
                   </select>
                 </div>
 
-                <div class="form-group">
-                  <input type="hidden" name="waktu_transaksi" value="<?php echo $row['waktu_transaksi'] ?>" class="form-control">
-                </div>
 
                 <div class="form-group">
-                  <label>Nama Pembeli</label>
-                  <input type="text" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" class="form-control">
+                  <input type="hidden" name="nama_pembeli" value="<?php echo $row['nama_pembeli'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">

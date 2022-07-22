@@ -18,7 +18,7 @@
               DATA TRANSAKSI DETAIL
             </div>
             <div class="card-body">
-              <a href="tambahtransaksidetail.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <a href="tambahtransaksi.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
@@ -55,6 +55,7 @@
                 <?php } ?>
                 </tbody>
               </table>
+              <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
             </div>
           </div>
       </div>
