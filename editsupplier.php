@@ -59,7 +59,7 @@
                 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
-                <a href="datasupplier.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+                <a href="datasupplier.php" class="btn btn-md btn-dark">BACK</a>
 
               </form>
             </div>

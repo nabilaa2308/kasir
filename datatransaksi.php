@@ -76,8 +76,11 @@
                 <tbody>
                   <?php 
                       include('koneksi.php');
+                      include('function.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT *, DATE_FORMAT(waktu_transaksi, '%W, %d/%m/%Y %H:%i') as waktu FROM transaksi INNER JOIN kasir ON kasir.id_kasir=transaksi.id_kasir INNER JOIN member ON member.id_member=transaksi.id_member INNER JOIN metode_pembayaran ON metode_pembayaran.id_metode_pembayaran=transaksi.id_metode_pembayaran");
+                      $query = mysqli_query($connection,"SELECT *, DATE_FORMAT(waktu_transaksi, '%W, %d/%m/%Y %H:%i') as waktu FROM transaksi 
+                      INNER JOIN kasir ON kasir.id_kasir=transaksi.id_kasir INNER JOIN member ON member.id_member=transaksi.id_member 
+                      INNER JOIN metode_pembayaran ON metode_pembayaran.id_metode_pembayaran=transaksi.id_metode_pembayaran");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
@@ -90,7 +93,7 @@
                       <td><?php echo $row['waktu'] ?></td>
                       <td><?php echo $row['ppn'] ?></td>
                       <td><?php echo $row['diskon'] ?></td>                
-                      <td>Rp<?php echo $row['total_bayar'] ?></td>
+                      <td><?php echo rupiah($row['total_bayar']) ?></td>
                       <td class="text-center">
                         <a href="edittransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksi.php?id=<?php echo $row['id_transaksi'] ?>" class="btn btn-sm btn-danger">HAPUS</a>

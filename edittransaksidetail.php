@@ -32,6 +32,10 @@
             </div>
             <div class="card-body">
               <form action="updatetransaksidetail.php" method="POST">
+
+                <div class="form-group">
+                <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi Detail" class="form-control">
+                </div>
                 
                 <div class="form-group">
                   <label>Kode INV</label>
@@ -70,13 +74,23 @@
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
+                  <?php
+                    include 'koneksi.php';
+                  $sql= "SELECT * FROM barang";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_barang" class="form-control">
+                    <?php while($row2=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['harga_jual'];?></option>
+                    <?php } ?>
+                  </select>
                 </div>
 
          
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
-                <a href="datatransaksidetail.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+                <a href="datatransaksidetail.php" class="btn btn-md btn-dark">BACK</a>
 
               </form>
             </div>

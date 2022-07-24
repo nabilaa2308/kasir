@@ -59,7 +59,7 @@
 
                 <button type="submit" name="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" name="reset" class="btn btn-warning">RESET</button>
-                <a href="datacabang.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+                <a href="datacabang.php" class="btn btn-md btn-dark">BACK</a>
 
               </form>
     </div>

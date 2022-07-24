@@ -15,7 +15,7 @@ $tanggal_masuk = $_POST['tanggal_masuk'];
 
 
 //query update data ke dalam database berdasarkan ID
-$query = "UPDATE barang SET nama_barang='$nama_barang', id_kategori='$id_kategori', id_supplier='$id_supplier', stok='$stok', harga_modal='$harga_modal', harga_jual='$harga_jual', tanggal_masuk='$tangga_masuk' WHERE id_barang='$id_barang'";
+$query = "UPDATE barang SET nama_barang='$nama_barang', id_kategori='$id_kategori', id_supplier='$id_supplier', stok='$stok', harga_modal='$harga_modal', harga_jual='$harga_jual', tanggal_masuk='$tanggal_masuk' WHERE id_barang='$id_barang'";
 //kondisi pengecekan apakah data berhasil diupdate atau tidak
 if($connection->query($query)) {
     //redirect ke halaman databarang.php 

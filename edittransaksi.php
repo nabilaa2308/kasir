@@ -93,23 +93,23 @@
                 </div>
 
                 <div class="form-group">
-                  <label>PPN</label>
+                  <label>PPN%</label>
                   <input type="text" name="ppn" value="<?php echo $row['ppn'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label>Diskon</label>
+                  <label>Diskon%</label>
                   <input type="text" name="diskon" value="<?php echo $row['diskon'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="text" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
+                  <input type="float" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">UPDATE</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
-                <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+                <a href="datatransaksi.php" class="btn btn-md btn-dark">BACK</a>
 
               </form>
             </div>

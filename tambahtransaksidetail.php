@@ -45,10 +45,11 @@
                   $sql= " SELECT * FROM barang ";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
+                  $b=". ";
                   ?>
                   <select name="id_barang" class="form-control">
                     <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_barang']?>"><?php echo $row['id_barang'].$a.$row['nama_barang'];?></option>
+                    <option value="<?php echo $row['id_barang']?>"><?php echo $row['id_barang'].$a.$row['nama_barang'].$b.$row['harga_jual'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -60,13 +61,50 @@
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual" class="form-control">
+                  <?php
+                    include 'koneksi.php';
+                  $sql= "SELECT * FROM barang";
+                  $query=mysqli_query($connection,$sql);
+                  $a=". ";
+                  ?>
+                  <select name="id_barang" class="form-control">
+                    <?php while($row2=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['harga_jual'];?></option>
+                    <?php } ?>
+                  </select>                
                 </div> 
 
+                <script type="text/javascript">
+		
+		var rupiah = document.getElementById('harga_jual');
+		rupiah.addEventListener('keyup', function(e){
+			// tambahkan 'Rp.' pada saat form di ketik
+			// gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+			rupiah.value = formatRupiah(this.value, 'Rp. ');
+		});
+ 
+		/* Fungsi formatRupiah */
+		function formatRupiah(angka, prefix){
+			var number_string = angka.replace(/[^,\d]/g, '').toString(),
+			split   		= number_string.split(','),
+			sisa     		= split[0].length % 3,
+			rupiah     		= split[0].substr(0, sisa),
+			ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+ 
+			// tambahkan titik jika yang di input sudah menjadi angka ribuan
+			if(ribuan){
+				separator = sisa ? '.' : '';
+				rupiah += separator + ribuan.join('.');
+			}
+ 
+			rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+			return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+		}
+	</script>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
                 <button type="reset" class="btn btn-warning">RESET</button>
-                <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+                <a href="datatransaksidetail.php" class="btn btn-md btn-dark">BACK</a>
 
 
               </form>

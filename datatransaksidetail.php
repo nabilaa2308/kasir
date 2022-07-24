@@ -18,7 +18,7 @@
               DATA TRANSAKSI DETAIL
             </div>
             <div class="card-body">
-              <a href="tambahtransaksi.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <a href="tambahtransaksidetail.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
@@ -34,8 +34,11 @@
                 <tbody>
                   <?php 
                       include('koneksi.php');
+                      include('function.php');
                       $no = 1;
-                      $query = mysqli_query($connection,"SELECT * FROM transaksi_detail INNER JOIN transaksi ON transaksi.id_transaksi=transaksi_detail.id_transaksi INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang");
+                      $query = mysqli_query($connection,"SELECT * FROM transaksi_detail 
+                      INNER JOIN transaksi ON transaksi.id_transaksi=transaksi_detail.id_transaksi 
+                      INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang");
                       while($row = mysqli_fetch_array($query)){
                   ?>
 
@@ -44,8 +47,8 @@
                       <td><?php echo $row['kode_inv'] ?></td>
                       <td><?php echo $row['nama_barang'] ?></td>
                       <td><?php echo $row['jumlah'] ?></td>
-                      <td>Rp<?php echo $row['harga_jual'] ?></td>
-                      <td>Rp<?php echo $row['total_harga'] ?></td>
+                      <td><?php echo rupiah($row['harga_jual']) ?></td>
+                      <td><?php echo rupiah($row['total_harga']) ?></td>
                       <td class="text-center">
                         <a href="edittransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-danger">HAPUS</a>
@@ -55,7 +58,7 @@
                 <?php } ?>
                 </tbody>
               </table>
-              <a href="datatransaksi.php" class="btn btn-md btn-dark" style="margin-bottom: 10px">BACK</a>
+              <a href="datatransaksi.php" class="btn btn-md btn-dark">BACK</a>
             </div>
           </div>
       </div>
