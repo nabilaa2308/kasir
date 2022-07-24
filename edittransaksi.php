@@ -94,17 +94,17 @@
 
                 <div class="form-group">
                   <label>PPN</label>
-                  <input type="number" name="ppn" value="<?php echo $row['ppn'] ?>" class="form-control">
+                  <input type="text" name="ppn" value="<?php echo $row['ppn'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Diskon</label>
-                  <input type="number" name="diskon" value="<?php echo $row['diskon'] ?>" class="form-control">
+                  <input type="text" name="diskon" value="<?php echo $row['diskon'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="number" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
+                  <input type="text" name="total_bayar" value="<?php echo $row['total_bayar'] ?>" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">UPDATE</button>

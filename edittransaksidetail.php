@@ -65,12 +65,12 @@
                 
                 <div class="form-group">
                   <label>Jumlah</label>
-                  <input type="number" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan Jumlah" class="form-control">
+                  <input type="text" name="jumlah" value="<?php echo $row['jumlah'] ?>" placeholder="Masukkan Jumlah" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="number" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
+                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" placeholder="Masukkan Harga Jual" class="form-control">
                 </div>
 
          

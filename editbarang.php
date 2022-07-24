@@ -79,12 +79,12 @@
                 
                 <div class="form-group">
                   <label>Harga Modal</label>
-                  <input type="number" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
+                  <input type="text" name="harga_modal" value="<?php echo $row['harga_modal'] ?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="number" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
+                  <input type="text" name="harga_jual" value="<?php echo $row['harga_jual'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">

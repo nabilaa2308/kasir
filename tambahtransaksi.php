@@ -75,17 +75,17 @@
 
                 <div class="form-group">
                   <label>PPN%</label>
-                  <input type="number" name="ppn" placeholder="Masukkan PPN" class="form-control">
+                  <input type="text" name="ppn" placeholder="Masukkan PPN" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Diskon%</label>
-                  <input type="number" name="diskon" placeholder="Masukkan Diskon" class="form-control">
+                  <input type="text" name="diskon" placeholder="Masukkan Diskon" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="number" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
+                  <input type="text" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-success">SIMPAN</button>
