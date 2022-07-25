@@ -32,8 +32,8 @@
                   $a=". ";
                   ?>
                   <select name="id_transaksi" class="form-control">
-                    <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_transaksi']?>"><?php echo $row['id_transaksi'].$a.$row['kode_inv'];?></option>
+                    <?php while($row1=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row1['id_transaksi']?>"><?php echo $row1['id_transaksi'].$a.$row1['kode_inv'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -45,11 +45,10 @@
                   $sql= " SELECT * FROM barang ";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
-                  $b=". ";
                   ?>
                   <select name="id_barang" class="form-control">
-                    <?php while($row=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row['id_barang']?>"><?php echo $row['id_barang'].$a.$row['nama_barang'].$b.$row['harga_jual'];?></option>
+                    <?php while($row2=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['nama_barang'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -68,8 +67,8 @@
                   $a=". ";
                   ?>
                   <select name="id_barang" class="form-control">
-                    <?php while($row2=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['harga_jual'];?></option>
+                    <?php while($row3=mysqli_fetch_array($query)){?>
+                    <option value="<?php echo $row3['id_barang']?>"><?php echo $row3['id_barang'].$a.$row3['harga_jual'];?></option>
                     <?php } ?>
                   </select>                
                 </div> 

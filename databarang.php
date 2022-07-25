@@ -75,10 +75,17 @@
                 <tbody>
                   <?php 
                       include('koneksi.php');
-                      include('function.php');
                       $no = 1;
                       $query = mysqli_query($connection,"SELECT *, DATE_FORMAT(tanggal_masuk, '%W, %d/%m/%Y') as tanggal_masuk FROM barang INNER JOIN kategori ON kategori.id_kategori=barang.id_kategori INNER JOIN supplier ON supplier.id_supplier=barang.id_supplier");
                       while($row = mysqli_fetch_array($query)){
+                  ?>
+                  <?php
+                  $harga_modal=$row['harga_modal'];
+                  $result1 = number_format($harga_modal,2,',','.');
+                  ?>
+                  <?php
+                  $harga_jual=$row['harga_jual'];
+                  $result2 = number_format($harga_jual,2,',','.');
                   ?>
 
                   <tr>
@@ -87,8 +94,8 @@
                       <td><?php echo $row['nama_kategori'] ?></td>
                       <td><?php echo $row['nama_supplier'] ?></td>
                       <td><?php echo $row['stok'] ?></td>
-                      <td><?php echo rupiah($row['harga_modal']) ?></td>
-                      <td><?php echo rupiah($row['harga_jual']) ?></td>
+                      <td>Rp <?php echo $result1 ?></td>
+                      <td>Rp <?php echo $result2 ?></td>
                       <td><?php echo $row['tanggal_masuk'] ?></td>
                       <td class="text-center">
                         <a href="editbarang.php?id=<?php echo $row['id_barang'] ?>" class="btn btn-sm btn-primary">EDIT</a>

@@ -65,12 +65,12 @@
                 
                 <div class="form-group">
                   <label>Harga Modal</label>
-                  <input type="float" id="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
+                  <input type="text" name="harga_modal" placeholder="Masukkan Harga Modal Barang" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Harga Jual</label>
-                  <input type="float" id="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
+                  <input type="text" name="harga_jual" placeholder="Masukkan Harga Jual Barang" class="form-control">
                 </div>
                       
                 <div class="form-group">
