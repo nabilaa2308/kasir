@@ -48,7 +48,7 @@
                       <td><?php echo $row['nama_barang'] ?></td>
                       <td><?php echo $row['jumlah'] ?></td>
                       <td><?php echo rupiah($row['harga_jual']) ?></td>
-                      <td><?php echo rupiah($row['total_harga']) ?></td>
+                      <td><?php echo rupiah($row['total_harga'])  ?></td>
                       <td class="text-center">
                         <a href="edittransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-danger">HAPUS</a>

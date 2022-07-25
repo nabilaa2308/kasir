@@ -34,7 +34,7 @@
               <form action="updatetransaksidetail.php" method="POST">
 
                 <div class="form-group">
-                <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" placeholder="Masukkan ID Transaksi Detail" class="form-control">
+                <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" class="form-control">
                 </div>
                 
                 <div class="form-group">
