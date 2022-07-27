@@ -17,11 +17,14 @@
               TAMBAH TRANSAKSI
             </div>
             <div class="card-body">
-              <form action="simpantransaksi.php" method="POST">    
+              <form action="simpantransaksi.php" method="POST"> 
+                   
+                <div class="form-group">
+                  <input type="hidden" name="id_transaksi" class="form-control">
+                </div>
 
                 <div class="form-group">
-                  <label>Kode Inv</label>
-                  <input type="text" name="kode_inv" placeholder="Masukkan Kode Inv" class="form-control">
+                  <input type="hidden" name="kode_inv" placeholder="Masukkan Kode Inv" class="form-control">
                 </div>
                 
                 <div class="form-group">
@@ -85,8 +88,8 @@
 
                 <div class="form-group">
                   <label>Total Bayar</label>
-                  <input type="text" id="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
-                </div>
+                  <input type="text" id="total_bayar" name="total_bayar" placeholder="Masukkan Total Bayar" class="form-control">
+                </div>   
 
                 <script type="text/javascript">
 		

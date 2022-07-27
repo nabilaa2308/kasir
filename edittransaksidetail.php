@@ -4,7 +4,7 @@
   
   $id = $_GET['id'];
   
-  $query = "SELECT * FROM transaksi_detail WHERE id_transaksi_detail = $id LIMIT 1";
+  $query = "SELECT * FROM transaksi_detail WHERE id_transaksi_detail = $id";
 
   $result = mysqli_query($connection, $query);
 
@@ -41,15 +41,15 @@
                   <label>Kode INV</label>
                   <?php
                     include 'koneksi.php';
-                  $sql= " SELECT * FROM transaksi";
+                    $id_transaksi_detail= $_GET['id'];
+                  $sql= " SELECT * FROM transaksi inner join transaksi_detail on transaksi_detail.id_transaksi=transaksi.id_transaksi where id_transaksi_detail=$id_transaksi_detail";
                   $query=mysqli_query($connection,$sql);
-                  $a=". ";
+                  while($data_transaksi=mysqli_fetch_array($query)){
+                    $id_transaksi_detail = $data_transaksi['id_transaksi_detail'];
+                    $kode_inv = $data_transaksi['kode_inv'];
+                  }
                   ?>
-                  <select name="id_transaksi" class="form-control">
-                    <?php while($row1=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row1['id_transaksi']?>"><?php echo $row1['id_transaksi'].$a.$row1['kode_inv'];?></option>
-                    <?php } ?>
-                  </select>
+                  <input type="text" name="id_transaksi" class="form-control" value="<?=$id_transaksi_detail?>. <?=$kode_inv?>" readonly>
                 </div>
                 
                 <div class="form-group">
@@ -62,7 +62,7 @@
                   ?>
                   <select name="id_barang" class="form-control">
                     <?php while($row2=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['nama_barang'];?></option>
+                    <option value="<?php echo $row2['id_barang']?>" <?php if($row2['id_barang'] == $row['id_barang']) { echo 'selected';}?>><?php echo $row2['id_barang'].$a.$row2['nama_barang'];?></option>
                     <?php } ?>
                   </select>
                 </div>
@@ -82,7 +82,7 @@
                   ?>
                   <select name="id_barang" class="form-control">
                     <?php while($row2=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row2['id_barang']?>"><?php echo $row2['id_barang'].$a.$row2['harga_jual'];?></option>
+                    <option value="<?php echo $row2['id_barang']?>" <?php if($row2['id_barang'] == $row['id_barang']) { echo 'selected';}?>><?php echo $row2['id_barang'].$a.$row2['harga_jual'];?></option>
                     <?php } ?>
                   </select>
                 </div>

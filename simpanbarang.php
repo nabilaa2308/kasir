@@ -13,8 +13,11 @@ $harga_modal   = $_POST['harga_modal'];
 $harga_jual    = $_POST['harga_jual'];
 $tanggal_masuk = $_POST['tanggal_masuk'];
 
+$hargamodal_str            = preg_replace("/[^0-9]/","", $harga_modal);
+$hargajual_str            = preg_replace("/[^0-9]/","", $harga_jual);
+
 //query insert data ke dalam database
-$query = "INSERT INTO barang (id_barang, nama_barang, id_kategori, id_supplier, stok, harga_modal, harga_jual, tanggal_masuk) VALUES ('$id_barang', '$nama_barang', '$id_kategori', '$id_supplier', '$stok', '$harga_modal', '$harga_jual', '$tanggal_masuk')";
+$query = "INSERT INTO barang (id_barang, nama_barang, id_kategori, id_supplier, stok, harga_modal, harga_jual, tanggal_masuk) VALUES ('$id_barang', '$nama_barang', '$id_kategori', '$id_supplier', '$stok', '$hargamodal_str', '$hargajual_str', '$tanggal_masuk')";
 
 //kondisi pengecekan apakah data berhasil dimasukkan atau tidak
 if($connection->query($query)) {

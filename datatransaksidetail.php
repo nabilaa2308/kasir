@@ -34,12 +34,16 @@
                 <tbody>
                   <?php 
                       include('koneksi.php');
-                      include('function.php');
+                      include('librupiah.php');
+                      $id_transaksi = $_GET['id'];
                       $no = 1;
                       $query = mysqli_query($connection,"SELECT * FROM transaksi_detail 
                       INNER JOIN transaksi ON transaksi.id_transaksi=transaksi_detail.id_transaksi 
-                      INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang");
+                      INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang 
+                      WHERE transaksi.id_transaksi=$id_transaksi");
+                      
                       while($row = mysqli_fetch_array($query)){
+
                   ?>
 
                   <tr>
@@ -47,8 +51,8 @@
                       <td><?php echo $row['kode_inv'] ?></td>
                       <td><?php echo $row['nama_barang'] ?></td>
                       <td><?php echo $row['jumlah'] ?></td>
-                      <td><?php echo rupiah($row['harga_jual']) ?></td>
-                      <td><?php echo rupiah($row['total_harga'])  ?></td>
+                      <td><?php echo rupiah3($row['harga_jual']) ?></td>
+                      <td><?php echo rupiah3($row['total_harga'])  ?></td>
                       <td class="text-center">
                         <a href="edittransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="hapustransaksidetail.php?id=<?php echo $row['id_transaksi_detail'] ?>" class="btn btn-sm btn-danger">HAPUS</a>

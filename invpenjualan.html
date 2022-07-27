@@ -1,191 +1,76 @@
-<!DOCTYPE html>
-<html lang="en" >
- 
+<html>
 <head>
+<title>Faktur Pembayaran</title>
+<style>
  
-  <meta charset="UTF-8">
-  <title>Template Faktur Untuk Kasir HTML</title>
- 
-  <style>
-@media print {
-    .page-break { display: block; page-break-before: always; }
+#tabel
+{
+font-size:15px;
+border-collapse:collapse;
 }
-      #invoice-POS {
-  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-  padding: 2mm;
-  margin: 0 auto;
-  width: 44mm;
-  background: #FFF;
+#tabel  td
+{
+padding-left:5px;
+border: 1px solid black;
 }
-#invoice-POS ::selection {
-  background: #f31544;
-  color: #FFF;
-}
-#invoice-POS ::moz-selection {
-  background: #f31544;
-  color: #FFF;
-}
-#invoice-POS h1 {
-  font-size: 1.5em;
-  color: #222;
-}
-#invoice-POS h2 {
-  font-size: .9em;
-}
-#invoice-POS h3 {
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 2em;
-}
-#invoice-POS p {
-  font-size: .7em;
-  color: #666;
-  line-height: 1.2em;
-}
-#invoice-POS #top, #invoice-POS #mid, #invoice-POS #bot {
-  /* Targets all id with 'col-' */
-  border-bottom: 1px solid #EEE;
-}
-#invoice-POS #top {
-  min-height: 100px;
-}
-#invoice-POS #mid {
-  min-height: 80px;
-}
-#invoice-POS #bot {
-  min-height: 50px;
-}
-#invoice-POS #top .logo {
-  height: 40px;
-  width: 150px;
-  background: url(https://www.sistemit.com/wp-content/uploads/2020/02/SISTEMITCOM-smlest.png) no-repeat;
-  background-size: 150px 40px;
-}
-#invoice-POS .clientlogo {
-  float: left;
-  height: 60px;
-  width: 60px;
-  background: url(https://www.sistemit.com/wp-content/uploads/2020/02/SISTEMITCOM-smlest.png) no-repeat;
-  background-size: 60px 60px;
-  border-radius: 50px;
-}
-#invoice-POS .info {
-  display: block;
-  margin-left: 0;
-}
-#invoice-POS .title {
-  float: right;
-}
-#invoice-POS .title p {
-  text-align: right;
-}
-#invoice-POS table {
-  width: 100%;
-  border-collapse: collapse;
-}
-#invoice-POS .tabletitle {
-  font-size: .5em;
-  background: #EEE;
-}
-#invoice-POS .service {
-  border-bottom: 1px solid #EEE;
-}
-#invoice-POS .item {
-  width: 24mm;
-}
-#invoice-POS .itemtext {
-  font-size: .5em;
-}
-#invoice-POS #legalcopy {
-  margin-top: 5mm;
-}
- 
-    </style>
- 
-  <script>
-  window.console = window.console || function(t) {};
-</script>
- 
- 
- 
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
- 
- 
+</style>
 </head>
+<body style='font-family:tahoma; font-size:8pt;'>
+<center><table style='width:350px; font-size:16pt; font-family:calibri; border-collapse: collapse;' border = '0'>
+<td width='70%' align='CENTER' vertical-align:top'><span style='color:black;'>
+<b>Toko</b></br>JL XXXXXXXXXXX XXXXXXX</span></br>
  
-<body translate="no" >
  
+<span style='font-size:12pt'>No. : xxxxx, 11 Juni 2020 (user:xxxxx), 11:57:50</span></br>
+</td>
+</table>
+<style>
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+</style>
+<table cellspacing='0' cellpadding='0' style='width:350px; font-size:12pt; font-family:calibri;  border-collapse: collapse;' border='0'>
  
-  <div id="invoice-POS">
-    <fieldset>
-    <center id="top">
-        <h2>Struk Penjualan</h2>
-      </div><!--End Info-->
-    </center>
- <center>
-    <div id="mid">
-      <div class="info">
-        <h2>Info Kontak</h2>
-        <p> 
-           Alamat : Pekanbaru RIAU</br>
-            Email  : xxxxxx@gmail.com</br>
-            Telephone   : 08521361xxxx</br>
-        </p>
-      </div>
-    </div><!--End Invoice Mid-->
-</center>
-    <div id="bot">
-                    <center>
-                    <div id="table">
-                        <table>
-                            <tr class="tabletitle">
-                                <td class="item"><h2>Barang</h2></td>
-                                <td class="Hours"><h2>Jumlah</h2></td>
-                                <td class="Rate"><h2>Harga Barang</h2></td>
-                            </tr>
- 
-                            <tr class="service">
-                                <td class="tableitem"><p class="itemtext">Roti</p></td>
-                                <td class="tableitem"><p class="itemtext">5</p></td>
-                                <td class="tableitem"><p class="itemtext">Rp3.000,-</p></td>
-                            </tr>
- 
-                            <tr class="service">
-                                <td class="tableitem"><p class="itemtext">Kerupuk</p></td>
-                                <td class="tableitem"><p class="itemtext">2</p></td>
-                                <td class="tableitem"><p class="itemtext">Rp2.000,-</p></td>
-                            </tr>
- 
-                            <tr class="service">
-                                <td class="tableitem"><p class="itemtext">Coca Cola</p></td>
-                                <td class="tableitem"><p class="itemtext">1</p></td>
-                                <td class="tableitem"><p class="itemtext">Rp5.000,-</p></td>
-                            </tr>
- 
-                            <tr class="tabletitle">
-                                <td></td>
-                                <td class="Rate"><h2>Total</h2></td>
-                                <td class="payment"><h2>Rp24.000,-</h2></td>
-                            </tr>
- 
-                        </table>
-                    </div><!--End Table-->
- 
-                    <div id="legalcopy">
-                        <p class="legal"><strong>Terimakasih Telah Berbelanja!</strong>  
-                        Barang yang sudah dibeli tidak dapat dikembalikan. Jangan lupa berkunjung kembali
-                        </p>
-                    </div>
-                </fieldset>
-                </center>
- 
-                </div><!--End InvoiceBot-->
-  </div><!--End Invoice-->
- 
-</body>
- 
+<tr align='center'>
+<td width='10%'>Barang</td>
+<td width='13%'>Harga</td>
+<td width='10%'>jumlah</td>
+<td width='7%'>Diskon %</td>
+<td width='13%'>Total</td><tr>
+<td colspan='5'><hr></td></tr>
+</tr>
+<tr><td style='vertical-align:top'>Roti</td>
+<td style='vertical-align:top; text-align:right; padding-right:10px'>Rp3.000</td>
+<td style='vertical-align:top; text-align:right; padding-right:10px'>5</td>
+<td style='vertical-align:top; text-align:right; padding-right:10px'>0,00%</td>
+<td style='text-align:right; vertical-align:top'>Rp15.000</td></tr>
+<tr>
+<td colspan='5'><hr></td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right'>Biaya Adm : </div></td><td style='text-align:right; font-size:16pt;'>Rp3.500</td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right; color:black'>Total : </div></td><td style='text-align:right; font-size:16pt; color:black'>Rp18.500</td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right; color:black'>Cash : </div></td><td style='text-align:right; font-size:16pt; color:black'>Rp20.000</td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right; color:black'>Change : </div></td><td style='text-align:right; font-size:16pt; color:black'>Rp1.500</td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right; color:black'>DP : </div></td><td style='text-align:right; font-size:16pt; color:black'>0</td>
+</tr>
+<tr>
+<td colspan = '4'><div style='text-align:right; color:black'>Sisa : </div></td><td style='text-align:right; font-size:16pt; color:black'>0</td>
+</tr>
+</table>
+<table style='width:350; font-size:12pt;' cellspacing='2'><tr></br><td align='center'>Barang Yang Sudah Dibeli Tidak Dapat Dikembalikan</br>****** TERIMAKASIH ******</br></td></tr></table></center></body>
 </html>
