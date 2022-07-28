@@ -21,7 +21,7 @@ $query = "INSERT INTO transaksi_detail (id_transaksi_detail, id_transaksi, id_ba
 if($connection->query($query)) {
 
     //redirect ke halaman datatransaksidetail.php 
-    header("location: datatransaksidetail.php");
+    header("location: datatransaksidetail.php?id=$id_transaksi");
 
 } else {
 

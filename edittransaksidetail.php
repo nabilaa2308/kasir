@@ -33,29 +33,25 @@
             <div class="card-body">
               <form action="updatetransaksidetail.php" method="POST">
 
-                <div class="form-group">
-                <input type="hidden" name="id_transaksi_detail" value="<?php echo $row['id_transaksi_detail'] ?>" class="form-control">
-                </div>
+               
                 
                 <div class="form-group">
                   <label>Kode INV</label>
                   <?php
-                    include 'koneksi.php';
-                    $id_transaksi_detail= $_GET['id'];
-                  $sql= " SELECT * FROM transaksi inner join transaksi_detail on transaksi_detail.id_transaksi=transaksi.id_transaksi where id_transaksi_detail=$id_transaksi_detail";
+                  $id_transaksi=$row['id_transaksi'];
+                  $sql= " SELECT * FROM transaksi where id_transaksi=$id_transaksi";
                   $query=mysqli_query($connection,$sql);
                   while($data_transaksi=mysqli_fetch_array($query)){
                     $id_transaksi_detail = $data_transaksi['id_transaksi_detail'];
                     $kode_inv = $data_transaksi['kode_inv'];
                   }
                   ?>
-                  <input type="text" name="id_transaksi" class="form-control" value="<?=$id_transaksi_detail?>. <?=$kode_inv?>" readonly>
+                  <input type="text" name="id_transaksi" class="form-control" value="<?php echo $kode_inv?>" readonly>
                 </div>
                 
                 <div class="form-group">
                   <label>Barang</label>
                   <?php
-                    include 'koneksi.php';
                   $sql= " SELECT * FROM barang";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";
@@ -75,7 +71,6 @@
                 <div class="form-group">
                   <label>Harga Jual</label>
                   <?php
-                    include 'koneksi.php';
                   $sql= "SELECT * FROM barang";
                   $query=mysqli_query($connection,$sql);
                   $a=". ";

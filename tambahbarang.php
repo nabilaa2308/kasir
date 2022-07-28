@@ -80,18 +80,18 @@
                 
                 <script type="text/javascript">
 		
-		var rupiah = document.getElementById('harga_modal');
-		rupiah.addEventListener('keyup', function(e){
+		var rupiah1 = document.getElementById('harga_modal');
+		rupiah1.addEventListener('keyup', function(e){
 			// tambahkan 'Rp.' pada saat form di ketik
 			// gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-			rupiah.value = formatRupiah(this.value, 'Rp. ');
+			rupiah1.value = formatRupiah(this.value, 'Rp. ');
 		});
 
-    var rupiah = document.getElementById('harga_jual');
-		rupiah.addEventListener('keyup', function(e){
+    var rupiah2 = document.getElementById('harga_jual');
+		rupiah2.addEventListener('keyup', function(e){
 			// tambahkan 'Rp.' pada saat form di ketik
 			// gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-			rupiah.value = formatRupiah(this.value, 'Rp. ');
+			rupiah2.value = formatRupiah(this.value, 'Rp. ');
 		});
 
 		/* Fungsi formatRupiah */

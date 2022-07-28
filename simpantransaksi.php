@@ -20,7 +20,7 @@ $ppn                  = $_POST['ppn'];
 $diskon               = $_POST['diskon'];
 $total_bayar          = $_POST['total_bayar'];
 $harga_str            = preg_replace("/[^0-9]/","", $total_bayar);
-
+ 
 //query insert data ke dalam database
 $query = "INSERT INTO transaksi (id_transaksi, kode_inv, id_kasir, id_member, id_metode_pembayaran, nama_pembeli, ppn, diskon, total_bayar) 
 VALUES ('$id_transaksi', '$kode_inv',  '$id_kasir', '$id_member', '$id_metode_pembayaran', '$nama_pembeli', '$ppn', '$diskon','$harga_str')";

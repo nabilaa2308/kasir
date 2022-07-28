@@ -20,7 +20,7 @@ $query = "UPDATE transaksi_detail SET id_transaksi ='$id_transaksi', id_barang =
 //kondisi pengecekan apakah data berhasil diupdate atau tidak
 if($connection->query($query)) {
     //redirect ke halaman datatransaksidetail.php 
-    header("location: datatransaksidetail.php");
+    header("location: datatransaksidetail.php?id='$id_transaksi'");
 } else {
     //pesan error gagal update data
     echo "Data Gagal Diupate!";

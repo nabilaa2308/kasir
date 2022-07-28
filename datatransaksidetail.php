@@ -18,7 +18,7 @@
               DATA TRANSAKSI DETAIL
             </div>
             <div class="card-body">
-              <a href="tambahtransaksidetail.php" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
+              <a href="tambahtransaksidetail.php?id=<?=$_GET ['id']?>" class="btn btn-md btn-success" style="margin-bottom: 10px">TAMBAH DATA</a>
               <table class="table table-bordered" id="myTable">
                 <thead>
                   <tr>
@@ -35,16 +35,15 @@
                   <?php 
                       include('koneksi.php');
                       include('librupiah.php');
-                      $id_transaksi = $_GET['id'];
+                      $id_transaksi = $_GET ['id'];
                       $no = 1;
                       $query = mysqli_query($connection,"SELECT * FROM transaksi_detail 
                       INNER JOIN transaksi ON transaksi.id_transaksi=transaksi_detail.id_transaksi 
                       INNER JOIN barang ON barang.id_barang=transaksi_detail.id_barang 
-                      WHERE transaksi.id_transaksi=$id_transaksi");
-                      
+                      WHERE transaksi.id_transaksi='$id_transaksi'");
                       while($row = mysqli_fetch_array($query)){
 
-                  ?>
+                        ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>

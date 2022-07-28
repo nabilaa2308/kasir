@@ -8,7 +8,9 @@
   </head>
 
   <body>
-
+  <?php 
+  include 'koneksi.php';
+  ?>
     <div class="container" style="margin-top: 80px">
       <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -19,23 +21,21 @@
             <div class="card-body">
               <form action="simpantransaksidetail.php" method="POST">
 
-                <div class="form-group">
-                  <input type="hidden" name="id_transaksi_detail" placeholder="Masukkan ID Transaksi Detail" class="form-control">
+              <div class="form-group">
+                  <input type="hidden" name="id_transaksi" value="<?php echo $_GET['id']?>" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label>Kode INV</label>
                   <?php
-                    include 'koneksi.php';
-                  $sql= " SELECT * FROM transaksi ";
+                  $id= $_GET['id'];
+                  $sql= "SELECT kode_inv FROM transaksi WHERE id_transaksi=$id";
                   $query=mysqli_query($connection,$sql);
-                  $a=". ";
+                  while($data_transaksi=mysqli_fetch_array($query)){
+                    $kode_inv = $data_transaksi['kode_inv'];
+                  }
                   ?>
-                  <select name="id_transaksi" class="form-control">
-                    <?php while($row1=mysqli_fetch_array($query)){?>
-                    <option value="<?php echo $row1['id_transaksi']?>"><?php echo $row1['id_transaksi'].$a.$row1['kode_inv'];?></option>
-                    <?php } ?>
-                  </select>
+                  <input type="text" name="id_transaksi" class="form-control" value="<?=$kode_inv?>" readonly> 
                 </div>
 
                 <div class="form-group">
